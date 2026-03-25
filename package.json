@@ -1,0 +1,73 @@
+{
+  "name": "@philiprehberger/dev-docs-kit",
+  "version": "0.1.0",
+  "description": "Generate comprehensive development documentation for Node.js/TypeScript projects",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "dev-docs-kit": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && npm run copy-templates",
+    "copy-templates": "cp -r src/templates dist/",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "documentation",
+    "docs",
+    "generator",
+    "template",
+    "scaffold",
+    "development",
+    "guides",
+    "fastify",
+    "prisma",
+    "typescript",
+    "nodejs",
+    "api",
+    "standards"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philiprehberger/ts-dev-docs-kit.git"
+  },
+  "homepage": "https://github.com/philiprehberger/ts-dev-docs-kit#readme",
+  "bugs": {
+    "url": "https://github.com/philiprehberger/ts-dev-docs-kit/issues"
+  },
+  "author": "Philip Rehberger",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "commander": "^14.0.3",
+    "prompts": "^2.4.2"
+  }
+}
