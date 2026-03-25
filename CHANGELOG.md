@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 (2026-03-25)
+
+### Fixed
+
+- Remove unintended co-author metadata from initial commit
+
 ## 0.1.0 (2026-03-25)
 
 ### Features
