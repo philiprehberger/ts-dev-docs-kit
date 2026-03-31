@@ -1,5 +1,8 @@
 # @philiprehberger/dev-docs-kit
 
+[![CI](https://github.com/philiprehberger/ts-dev-docs-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-dev-docs-kit/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@philiprehberger/dev-docs-kit.svg)](https://www.npmjs.com/package/@philiprehberger/dev-docs-kit)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/ts-dev-docs-kit)](https://github.com/philiprehberger/ts-dev-docs-kit/commits/main)
 Generate comprehensive development documentation for Node.js/TypeScript projects. Never start docs from scratch again.
 
 ## Features
@@ -238,16 +241,24 @@ Contributions welcome! To add a new stack:
 4. Update `getAvailableStacks()` in `src/templates.ts`
 5. Submit a PR
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/ts-dev-docs-kit)
+
+🐛 [Report issues](https://github.com/philiprehberger/ts-dev-docs-kit/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/ts-dev-docs-kit/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
-
-## Author
-
-Philip Rehberger
-
-## Links
-
-- [GitHub](https://github.com/philiprehberger/ts-dev-docs-kit)
-- [npm](https://www.npmjs.com/package/@philiprehberger/dev-docs-kit)
-- [Issues](https://github.com/philiprehberger/ts-dev-docs-kit/issues)
+[MIT](LICENSE)

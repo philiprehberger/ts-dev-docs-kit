@@ -1,6 +1,6 @@
 {
   "name": "@philiprehberger/dev-docs-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generate comprehensive development documentation for Node.js/TypeScript projects",
   "type": "module",
   "main": "./dist/index.cjs",
