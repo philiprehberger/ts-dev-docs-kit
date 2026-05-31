@@ -19,6 +19,17 @@ export function toKebabCase(str: string): string {
     .toLowerCase();
 }
 
+export function getAvailableVariables(): TemplateVariables {
+  return {
+    projectName: 'projectName',
+    projectNameCamelCase: 'projectNameCamelCase',
+    projectNamePascalCase: 'projectNamePascalCase',
+    projectNameKebabCase: 'projectNameKebabCase',
+    currentDate: 'currentDate',
+    currentYear: 'currentYear',
+  };
+}
+
 export function createTemplateVariables(projectName: string): TemplateVariables {
   const now = new Date();
 

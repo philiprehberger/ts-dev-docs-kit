@@ -1,6 +1,6 @@
 {
   "name": "@philiprehberger/dev-docs-kit",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Generate comprehensive development documentation for Node.js/TypeScript projects",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -29,6 +29,7 @@
     "copy-templates": "cp -r src/templates dist/",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
+    "test": "node --test",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

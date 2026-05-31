@@ -1,17 +1,25 @@
 #!/usr/bin/env node
 
+import { readFileSync } from 'fs';
 import { Command } from 'commander';
 import prompts from 'prompts';
 import { generateDocs } from './generator';
 import { getAvailableStacks } from './templates';
 import type { Stack } from './types';
 
+// Read version dynamically from package.json so it never drifts from the
+// published npm version. The compiled CLI lives in dist/, so package.json is
+// one directory up from the running file.
+const pkg = JSON.parse(
+  readFileSync(new URL('../package.json', import.meta.url), 'utf8'),
+) as { version: string };
+
 const program = new Command();
 
 program
   .name('dev-docs-kit')
   .description('Generate comprehensive development documentation for your project')
-  .version('0.1.0');
+  .version(pkg.version);
 
 program
   .command('init')

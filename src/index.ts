@@ -1,4 +1,4 @@
 export { generateDocs } from './generator';
-export { replaceVariables } from './replacer';
+export { replaceVariables, getAvailableVariables } from './replacer';
 export { loadTemplate, getAvailableStacks } from './templates';
-export type { GenerateOptions, Stack, TemplateFile } from './types';
+export type { GenerateOptions, Stack, TemplateFile, TemplateVariables } from './types';

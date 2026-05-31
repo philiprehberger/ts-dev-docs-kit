@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0
+
+- Add `getAvailableVariables()` returning a sample object listing all supported template variable keys
+- CLI now reads version dynamically from package.json (no more drift between CLI and published version)
+- CI: add `.github/workflows/ci.yml` for push/PR builds
+- Tests: add smoke tests for core exports
+- README: add package card image
+
 ## 0.1.2
 
 - Standardize README to 3-badge format with emoji Support section

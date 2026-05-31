@@ -3,6 +3,9 @@
 [![CI](https://github.com/philiprehberger/ts-dev-docs-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-dev-docs-kit/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/dev-docs-kit.svg)](https://www.npmjs.com/package/@philiprehberger/dev-docs-kit)
 [![Last updated](https://img.shields.io/github/last-commit/philiprehberger/ts-dev-docs-kit)](https://github.com/philiprehberger/ts-dev-docs-kit/commits/main)
+
+![@philiprehberger/dev-docs-kit](https://raw.githubusercontent.com/philiprehberger/ts-dev-docs-kit/main/package-card.webp)
+
 Generate comprehensive development documentation for Node.js/TypeScript projects. Never start docs from scratch again.
 
 ## Features
@@ -53,6 +56,21 @@ generateDocs({
   includePlans: true,
   includeIssues: true,
 });
+```
+
+### Discovering Variables
+
+Use `getAvailableVariables()` to discover every template variable key supported
+by `replaceVariables()`. Each value is a self-describing placeholder string
+(the key name itself), making it easy to enumerate or surface in tooling:
+
+```typescript
+import { getAvailableVariables } from '@philiprehberger/dev-docs-kit';
+
+const vars = getAvailableVariables();
+console.log(Object.keys(vars));
+// => ['projectName', 'projectNameCamelCase', 'projectNamePascalCase',
+//     'projectNameKebabCase', 'currentDate', 'currentYear']
 ```
 
 ## What Gets Generated
@@ -229,6 +247,16 @@ function replaceVariables(
   content: string,
   variables: TemplateVariables
 ): string
+```
+
+### `getAvailableVariables()`
+
+Return a sample `TemplateVariables` object listing every supported template
+variable key, with each value set to its own key name as a placeholder. Useful
+for documenting or programmatically discovering the available variables.
+
+```typescript
+function getAvailableVariables(): TemplateVariables
 ```
 
 ## Contributing
