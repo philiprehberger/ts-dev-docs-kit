@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: ['src/index.ts', 'src/cli.ts'],
@@ -9,4 +9,8 @@ export default defineConfig({
   treeshake: true,
   shims: true,
   target: 'es2020',
+  outExtensions: ({ format }) => ({
+    js: format === 'es' ? '.js' : '.cjs',
+    dts: format === 'es' ? '.d.ts' : '.d.cts',
+  }),
 });
